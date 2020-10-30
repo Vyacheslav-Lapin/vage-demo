@@ -34,7 +34,7 @@
     <!--endregion-->
 
     <!--region Test-libs-->
-    <testcontainers.version>1.15.0-rc1</testcontainers.version>
+    <testcontainers.version>1.15.0-rc2</testcontainers.version>
     <!--endregion-->
 
     <!--region Plugins-->
@@ -371,30 +371,6 @@
           </configuration>
         </plugin>
         <plugin>
-          <groupId>com.spotify</groupId>
-          <artifactId>dockerfile-maven-plugin</artifactId>
-          <version>${dockerfile-maven-plugin.version}</version>
-          <configuration>
-            <repository>${project.name}</repository>
-            <tag>${project.version}</tag>
-            <buildArgs>
-              <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
-            </buildArgs>
-          </configuration>
-          <dependencies>
-            <dependency>
-              <groupId>javax.activation</groupId>
-              <artifactId>javax.activation-api</artifactId>
-              <version>1.2.0</version>
-            </dependency>
-            <dependency>
-              <groupId>org.codehaus.plexus</groupId>
-              <artifactId>plexus-archiver</artifactId>
-              <version>3.6.0</version>
-            </dependency>
-          </dependencies>
-        </plugin>
-        <plugin>
           <groupId>org.projectlombok</groupId>
           <artifactId>lombok-maven-plugin</artifactId>
           <version>${lombok-maven-plugin.version}</version>
@@ -429,10 +405,6 @@
       <plugin>
         <groupId>com.github.spotbugs</groupId>
         <artifactId>spotbugs-maven-plugin</artifactId>
-      </plugin>
-      <plugin>
-        <groupId>com.spotify</groupId>
-        <artifactId>dockerfile-maven-plugin</artifactId>
       </plugin>
       <plugin>
         <groupId>org.projectlombok</groupId>
